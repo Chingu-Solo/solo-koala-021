@@ -1,0 +1,52 @@
+.light-mode header{
+    border-bottom: 1px solid #888;
+    color: #888;
+}
+.dark-mode header{
+    border-bottom: 1px solid rgb(204, 225, 253);
+    color: rgb(204, 225, 253);
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5vh;
+    padding-bottom: 2.5vh;
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+
+header nav, header ul{
+    padding: 0;
+    margin: 0;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    margin-right: 5vw;
+}
+
+header ul li{
+    margin-left: 10px;
+    font-size: .75em;
+}
+
+header .logo{
+    margin-left: 5vw;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+header .logo span{
+    font-weight: bold;
+}
+
+
+
+

@@ -1,0 +1,49 @@
+.dark-mode footer{
+    border-top: 1px solid rgb(204, 225, 253);
+    color: white;
+}
+
+.light-mode footer{
+    border-top: 1px solid #888;
+    color: black;
+}
+
+.light-mode footer small span{
+    color: red;
+}
+
+.dark-mode footer small span{
+    color: rgb(255, 148, 214);
+}
+
+.social, footer, .social li{
+    display: flex;
+}
+.social li{
+    margin: 0 10px;
+}
+
+.light-mode .social li#github{
+    color:rgb(255, 166, 0);
+}
+
+.light-mode .social li#linkedin{
+    color:rgb(0, 40, 114);
+}
+
+.dark-mode .social li#github{
+    color:rgba(247, 212, 149, 0.651);
+}
+
+.dark-mode .social li#linkedin{
+    color:rgba(126, 169, 250, 0.651);
+}
+
+footer{
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 15px;
+    position: fixed;
+    bottom: 0;
+}

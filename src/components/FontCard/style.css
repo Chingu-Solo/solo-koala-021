@@ -1,0 +1,93 @@
+.grid .font-card{
+    width: 250px;
+    height: 250px;
+}
+
+.list .font-card{
+    width: 100%;
+    align-self: center;
+    height: 250px;
+}
+
+.font-card{
+    flex-direction: column;
+    transition: width 1s;
+}
+
+.dark-mode .font-card{
+    border-top: 1px solid rgb(241, 247, 255);
+    color: rgb(241, 247, 255);
+}
+
+.light-mode .font-card{
+    border-top: 1px solid black;
+    color: black;
+}
+
+
+.font-card, .font-card .header, .font-card .header .header-group, .font-card .body{
+    display: flex;
+}
+
+.font-card .header{
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.font-card .header .header-group{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.font-card .header .header-group h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.font-card .header button{
+    background-color: transparent;
+    outline: none;
+    border-radius: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.dark-mode .font-card .header button{
+    color: lightblue;
+    border: 2px solid lightblue;
+}
+
+.light-mode .font-card .header button{
+    color: red;
+    border: 2px solid red;
+}
+
+.font-card .body{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    margin-top: -20px;
+}
+
+.font-card .body p{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-y: auto;
+    word-wrap: break-word;
+    -ms-overflow-style: none; 
+    overflow: -moz-scrollbars-none; 
+}
+
+.font-card .body p::-webkit-scrollbar{
+    width: 0;
+}
+
+.font-card .body p::-moz-scrollbar{
+    width: 0;
+}
