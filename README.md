@@ -1,7 +1,9 @@
 Favorite Fonts
 ==============
-
-[how the app looks like][app-screen]
+### Dark Mode
+![how the app looks like][app-screen-dark]
+### Light Mode
+![how the app looks like][app-screen-light]
 
 Overview
 --------
@@ -21,29 +23,21 @@ Features
 - Search fonts from Google Fonts API
 - Type a sample text to see how it will look like in the font you've searched
 - Choose the text size (12px, 24px, 36px or 48px) 
+- Dark / Light Mode
+- Grid / List Layout
+- Responsive Design
 
 Installation
 ------------
+    git clone https://github.com/Chingu-Solo/solo-koala-021.git
+    cd solo-koala-021
+    npm install
+    npm start
 
-Install $project by running:
+Deploy
+------
 
-    install project
+It will be available soon
 
-Contribute
-----------
-
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
-
-License
--------
-
-The project is licensed under the BSD license.
-
-[app-screen]: "./assets/img/app_dark_mode.png"
+[app-screen-dark]: ./assets/img/app_dark_mode.png
+[app-screen-light]: ./assets/img/app_light_mode.png
