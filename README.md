@@ -1,44 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Favorite Fonts
+==============
 
-## Available Scripts
+[how the app looks like][app-screen]
 
-In the project directory, you can run:
+Overview
+--------
 
-### `yarn start`
+Favorite Fonts is a single page application that mimics some of the features that Google Fonts has. You can search for several different fonts there are available in the Google Fonts API and see how they look like. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Technologies
+-----
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Typescript
+- React
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Features
+--------
 
-### `yarn build`
+- Search fonts from Google Fonts API
+- Type a sample text to see how it will look like in the font you've searched
+- Choose the text size (12px, 24px, 36px or 48px) 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installation
+------------
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Install $project by running:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    install project
 
-### `yarn eject`
+Contribute
+----------
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Issue Tracker: github.com/$project/$project/issues
+- Source Code: github.com/$project/$project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Support
+-------
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you are having issues, please let us know.
+We have a mailing list located at: project@google-groups.com
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+License
+-------
 
-## Learn More
+The project is licensed under the BSD license.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[app-screen]: "./assets/img/app_dark_mode.png"

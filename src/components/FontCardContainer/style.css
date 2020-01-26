@@ -1,0 +1,21 @@
+.font-card-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    width: 85vw;
+    margin-bottom: 30px;
+    min-height: 75vh;
+  }
+  
+.font-card-container.grid{
+    flex-direction: row;
+}
+
+.font-card-container.list{
+    flex-direction: column;
+}
+
+.font-card-container div{
+    margin-bottom: 20px;
+}

@@ -1,0 +1,77 @@
+.font-manager{
+    margin-top: 20px;
+    width: 85vw;
+  }
+  
+.font-manager form{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
+.dark-mode .font-manager form{
+  border: 2px solid rgb(204, 225, 253);
+}
+
+.light-mode .font-manager form{
+  border: 2px solid #888;
+}
+
+.dark-mode .font-manager select, .dark-mode .font-manager input, .dark-mode .font-manager form > button {
+  background-color: rgb(2, 6, 24);
+  color: rgb(204, 225, 253);
+}
+
+.light-mode .font-manager select, .light-mode .font-manager input, .light-mode .font-manager form > button {
+  background-color: white;
+  color: #888;
+}
+
+.dark-mode .font-manager input{
+  border-right: 1px solid rgb(204, 225, 253);
+}
+
+.light-mode .font-manager select{
+  background-color: white;
+}
+
+.font-manager select{
+  border: none;
+}
+
+.font-manager input{
+  border: none;
+  border-right: 1px solid black;
+}
+
+.font-manager input:focus, .font-manager select:focus{
+  outline: none;
+  border: none;
+}
+
+.font-manager input:focus {
+  border-bottom: 1px solid black;
+}
+
+.font-manager form fieldset{
+  border: 0;
+  padding: 0;
+}
+.font-manager form fieldset button{
+  margin: 0 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+button[name="DarkMode"]{
+  background-color: rgb(2, 6, 24);
+  border: 2px solid #FFF;
+}
+
+button[name="LightMode"]{
+  background-color: #FFF;
+  border: 2px solid rgb(2, 6, 24);
+}
