@@ -1,0 +1,31 @@
+@media  (max-width: 750px){
+    .font-manager form fieldset, .font-manager form input[name="sampleText"], .font-manager form button[name="listLayout"]{
+      display: none;
+    }
+    .font-manager form input[name="font"]{
+      width: 90%;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    footer small{
+        width: 70%;
+    }
+    aside{
+        bottom: 100px !important;
+        left: 46% !important
+    }
+}
+  
+@media (max-width: 930px){
+    .font-card-container{
+        flex-direction: column;
+    }
+
+    .font-card-container .font-card{
+        width: 100%;
+    }
+}
+

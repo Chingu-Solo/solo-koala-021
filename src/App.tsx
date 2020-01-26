@@ -1,50 +1,17 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
-import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
-import './App.css';
+import React, { useState, useMemo } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IconName } from '@fortawesome/fontawesome-svg-core'
+import { Helmet } from 'react-helmet'
+import { reallyCoolQuotes } from './helpers/helpers.variables'
+import { generateQuote, setModeByCurrentHours, useFetch, filterByName } from './helpers/helpers.function'
+import { Mode, ListLayout } from './helpers/helpers.enum'
 import Header from './components/Header'
 import FontCard from './components/FontCard'
 import Footer from './components/Footer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { generateQuote, setModeByCurrentHours } from './helpers/helpers.function'
-import { Mode, ListLayout } from './helpers/helpers.enum'
-import { IconName } from '@fortawesome/fontawesome-svg-core'
-import { Helmet } from 'react-helmet'
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
+import './App.css';
+import './responsivity.css';
 
-const reallyCoolQuotes: string[] = [
-  "Don’t let the noise of others’ opinions drown out your own inner voice.",
-  "Your limitation—it’s only your imagination.",
-  "Push yourself, because no one else is going to do it for you.",
-  "Sometimes later becomes never. Do it now.",
-  "Great things never come from comfort zones.",
-  "Dream it. Wish it. Do it.",
-  "Success doesn’t just find you. You have to go out and get it.",
-  "The harder you work for something, the greater you’ll feel when you achieve it.",
-  "Dream bigger. Do bigger.",
-  "Don’t stop when you’re tired. Stop when you’re done.",
-  "Wake up with determination. Go to bed with satisfaction.",
-  "Do something today that your future self will thank you for.",
-  "Little things make big days.",
-  "It’s going to be hard, but hard does not mean impossible."
-]
-
-function useFetch(url: string) {
-  const [data, updateData] = useState({})
-
-  useEffect(() => {
-    async function fetchAsync() {
-      const resp = await fetch(url)
-      const json = await resp.json()
-      updateData(json)
-    }
-    fetchAsync()
-  }, [url])
-
-  return (data as any).items
-}
-
-function filterByName(fontsArr: any[], fontFamily: string) {
-  return fontFamily ? fontsArr.filter(font => font.family.toLowerCase().startsWith(fontFamily.toLowerCase())) : fontsArr.slice(0,20)
-}
 
 const App: React.FC = () => {
   const [font, setFont] = useState('')
@@ -63,15 +30,10 @@ const App: React.FC = () => {
     return mappedLinks
   }, [filteredFonts])
 
-  const mappedLazyFontCards =
-    useCallback(() : JSX.Element | JSX.Element[] => {
-      function mappedFontCards(fontSize: string, sampleText: string, defaultQuote: string, filteredFonts: any) : JSX.Element | JSX.Element[] {
-        console.log(document.getElementById("#root")?.clientHeight)
-        return filteredFonts.map((font: any, index: number) => <FontCard key={index} fontFamily={font.family} fontSize={fontSize} sampleText={sampleText || defaultQuote} title={font.family} />)
-      }
-      return mappedFontCards(fontSize, sampleText, defaultQuote, filteredFonts)
-    } , [fontSize, sampleText, defaultQuote, filteredFonts])
-
+  const mappedLazyFontCards = 
+    useMemo( () => {
+      return filteredFonts ? filteredFonts.map((font: any, index: number) => <FontCard key={index} fontFamily={font.family} fontSize={fontSize} sampleText={sampleText || defaultQuote} title={font.family} />) : <></>
+    }, [fontSize, sampleText, defaultQuote, filteredFonts])
 
   function handleChange(e: React.FormEvent<HTMLInputElement>): void {
     const { id, value } = e.currentTarget
@@ -122,13 +84,12 @@ const App: React.FC = () => {
             <button name="DarkMode" value={Mode.DarkMode} onClick={e => changeMode(e, "Mode")}></button>
             <button name="LightMode" value={Mode.LightMode} onClick={e => changeMode(e, "Mode")}></button>
           </fieldset>
-          <button value={listLayout === ListLayout.Grid ? ListLayout.List : ListLayout.Grid} onClick={e => changeMode(e, "ListLayout")}> <FontAwesomeIcon icon={["fas", `${listLayout === ListLayout.Grid ? "list" : "grip-horizontal"}` as IconName]} /> </button>
+          <button name="listLayout" value={listLayout === ListLayout.Grid ? ListLayout.List : ListLayout.Grid} onClick={e => changeMode(e, "ListLayout")}> <FontAwesomeIcon icon={["fas", `${listLayout === ListLayout.Grid ? "list" : "grip-horizontal"}` as IconName]} /> </button>
           <button value="reset" name="reset" onClick={e => changeMode(e, "Reset")} >  <FontAwesomeIcon icon={["fas", "spinner"]} /></button>
         </form>
       </div>
       <div className={`font-card-container ${listLayout === ListLayout.Grid ? 'grid' : 'list'}`}>
-        <FontCard fontFamily="Roboto" title="Font Massa" sampleText={sampleText || defaultQuote} fontSize={fontSize} />
-        {filteredFonts ? mappedLazyFontCards() : <></>}
+        {mappedLazyFontCards  }
       </div>
       <ScrollUpButton style={{ backgroundColor: "transparent", fill: mode === Mode.DarkMode ? "lightblue" : "red", outline: "none" }} />
       <Footer />
