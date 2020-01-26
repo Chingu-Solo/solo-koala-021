@@ -8,7 +8,7 @@ Favorite Fonts
 Overview
 --------
 
-Favorite Fonts is a single page application that mimics some of the features that Google Fonts has. You can search for several different fonts there are available in the Google Fonts API and see how they look like. 
+Favorite Fonts is a single page application that mimics some of the features of [Google Fonts][1]. You can search for several different fonts available in the Google Fonts API and see how they look like. 
 
 Technologies
 -----
@@ -41,3 +41,4 @@ It will be available soon
 
 [app-screen-dark]: ./assets/img/app_dark_mode.png
 [app-screen-light]: ./assets/img/app_light_mode.png
+[1]: https://fonts.google.com/
