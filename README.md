@@ -4,6 +4,8 @@ Favorite Fonts
 ![how the app looks like][app-screen-dark]
 ### Light Mode
 ![how the app looks like][app-screen-light]
+### Mobile
+![how the app looks like][mobile-dark]
 
 Overview
 --------
@@ -21,8 +23,9 @@ Features
 
 - Search fonts from Google Fonts API
 - Type a sample text to see how it will look like in the font you've searched
-- Choose the text size (12px, 24px, 36px or 48px) 
-- Dark / Light Mode
+- Choose the text size (several options to choose)
+- Dark / Light Mode 
+- Dark Mode ( Between 6PM and 5AM) / Light Mode (Between 6AM and 5PM)  - Local Time
 - Grid / List Layout
 - Responsive Design
 
@@ -39,9 +42,11 @@ In order to get this application running you will need to have a Google Fonts AP
 Deploy
 ------
 
-It will be available soon
+You will need to have a modern browser and have it's javascript turned on. The application is available on Netlify, just follow this link - [Favorite Fonts][3] -, and you will get the app running
 
 [app-screen-dark]: ./assets/img/app_dark_mode.png
 [app-screen-light]: ./assets/img/app_light_mode.png
+[mobile-dark]: ./assets/img/mobile_dark.png
 [1]: https://fonts.google.com/
 [2]: https://developers.google.com/fonts/docs/developer_api#APIKey
+[3]: https://loving-joliot-f91dfe.netlify.com/
