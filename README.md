@@ -29,7 +29,7 @@ Features
 - Grid / List Layout
 - Responsive Design
 
-Installation and How To Run
+How to get it running locally
 ---------------------------
 In order to get this application running you will need to have a Google Fonts API Key and replace the $YOUR_KEY (in the echo command) with your API Key value. In case you don't have this key, go to [this page][2] and generate one for you.
 
