@@ -31,6 +31,6 @@ export function useFetch(url: string) {
   }
 
 export function filterByName(fontsArr: any[], fontFamily: string) {
-  return fontFamily ? fontsArr.filter(font => font.family.toLowerCase().startsWith(fontFamily.toLowerCase())) : fontsArr.slice(0,20)
+  return fontFamily ? fontsArr.filter(font => font.family.toLowerCase().startsWith(fontFamily.toLowerCase())) : fontsArr.slice(0,10)
 }
 

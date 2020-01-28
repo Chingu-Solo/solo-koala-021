@@ -23,12 +23,12 @@ const App: React.FC = () => {
   const googleFontsArr = useFetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=${process.env.REACT_APP_GOOGLE_API_KEY}`)
 
   const defaultQuote = useMemo<string>(() => generateQuote(reallyCoolQuotes), [])
-  const filteredFonts = useMemo(() => googleFontsArr ? filterByName(googleFontsArr, font) : null, [font, googleFontsArr])
+  const filteredFonts = useMemo(() => googleFontsArr ? filterByName(googleFontsArr, font) : [], [font, googleFontsArr])
 
   const mappedLinks = useMemo<JSX.Element | JSX.Element[]>(() => {
-    const mappedLinks = filteredFonts ? filteredFonts.map((font, index) => <link key={index} rel="stylesheet" href={`https://fonts.googleapis.com/css?family=${font.family.replace(/\s/g, "+")}`} />) : <link />
+    const mappedLinks = googleFontsArr ? googleFontsArr.filter((font: any) => !["Open Sans Condensed", "Sunflower", "Coda Caption", "Buda", "Molle", "UnifrakturCook"].includes(font.family)).map((font :any, index:number) => <link key={index} rel="stylesheet" href={`https://fonts.googleapis.com/css?family=${font.family.replace(/ /g, "+")}&display=swap`} />) : <link />
     return mappedLinks
-  }, [filteredFonts])
+  }, [googleFontsArr])
 
   const mappedFontCards =
     useMemo<JSX.Element | JSX.Element[]>(() => {
