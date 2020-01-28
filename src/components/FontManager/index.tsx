@@ -12,10 +12,18 @@ const FontManager: FC<FontManagerProps> = (props : FontManagerProps) => {
             <input type="text" placeholder="Search fonts" name="font" id="font" value={font} onChange={handleChange} />
             <input type="text" placeholder="Type something" name="sampleText" id="sampleText" value={sampleText} onChange={handleChange} />
             <select name="fontSize" id="fontSize" onChange={handleDropDown} value={fontSize}>
+                <option value="8px">8px</option>
                 <option value="12px">12px</option>
+                <option value="16px">16px</option>
+                <option value="20px">20px</option>
                 <option value="24px">24px</option>
+                <option value="28px">28px</option>
+                <option value="32px">32px</option>
                 <option value="36px">36px</option>
-                <option value="48px">48px</option>
+                <option value="40px">40px</option>
+                <option value="44px">44px</option>
+                <option value="46px">46px</option>
+                <option value="50px">50px</option>
             </select>
             <fieldset>
                 <button name="DarkMode" value={Mode.DarkMode} onClick={e => changeMode(e, "Mode")}></button>
