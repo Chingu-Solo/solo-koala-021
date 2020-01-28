@@ -11,6 +11,7 @@ import FontCardContainer from './components/FontCardContainer'
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 import './App.css';
 import './responsivity.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const App: React.FC = () => {
@@ -86,7 +87,7 @@ const App: React.FC = () => {
       </Helmet>
       <Header />
       <FontManager changeMode={changeMode} font={font} fontSize={fontSize} handleChange={handleChange} handleDropDown={handleDropDown} listLayout={listLayout} sampleText={sampleText} />
-      {fetchComplete ? <FontCardContainer listLayout={listLayout} mappedFontCards={mappedFontCards} />: <p>Fetching data...</p>}
+      {fetchComplete ? <FontCardContainer listLayout={listLayout} mappedFontCards={mappedFontCards} />: <FontAwesomeIcon icon={["fas","spinner"]} size="3x" spin style={{ color: mode === Mode.DarkMode ? "lightblue" : "red", marginTop: "30vh"}} />}
       <ScrollUpButton style={{ backgroundColor: "transparent", fill: mode === Mode.DarkMode ? "lightblue" : "red", outline: "none" }} />
       <Footer />
     </div>

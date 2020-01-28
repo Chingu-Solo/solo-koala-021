@@ -11,7 +11,7 @@
 
 .font-card{
     flex-direction: column;
-    transition: width 1s;
+    transition: width .25s ease-in;
 }
 
 .dark-mode .font-card{
