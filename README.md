@@ -50,7 +50,7 @@ You will need to have node and yarn installed in your server. Then, you just nee
     echo "REACT_APP_GOOGLE_API_KEY=$YOUR_KEY" > .env.production
     yarn build
 
-After doing this, yarn will generate a build folder to you. This is what your http-server must execute
+After doing this, yarn will generate a build folder for you. This is what your http-server must execute
 
 Live version
 ------
